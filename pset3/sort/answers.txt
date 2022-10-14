@@ -1,0 +1,13 @@
+sort1 uses: bubble sort
+
+How do you know?: sort the sorted list time is very low bubble search run faster than selection sort in already sorted data
+
+sort2 uses: merge sort 
+
+How do you know?: get lowest search time in random search
+
+sort3 uses: selection sort
+
+How do you know?: take more time in every operatin in sorted and randam data time is almost same
+
+

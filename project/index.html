@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1aa96888a3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="continer">
+            <nav>
+                <h1 class="logo">RAM_GOPAL_SIDDH</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>software developer</p>
+                <h2>Hi i'm <span>Ram Gopal</span> </h2>
+            </div>
+        </div>
+    </div>
+    <!-------------------------Projects------------------------------------------->
+    <div id="projects">
+        <div class="continer">
+            <h1 class="sub-title"> My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <h1>commening</h1>
+                    <!--add photo of work-->
+                </div>
+                <div class="work">
+                    <h1>soon ...........</h1>
+                    <!--add photo of work-->
+                </div>
+                <div class="work">
+                    <!--add photo of work-->
+                </div>
+            </div>
+        </div>
+    </div>
+<!---------------------------------Contact----------------------------------------->
+    <div id="contact">
+        <div class="continer">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"> Contact Me</h1>
+                    <p></a><i class="fa-solid fa-paper-plane"></i>ramgopalsiddh.000@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/ramgopalsiddh/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/ramgopalsiddh/"><i class="fa-brands fa-github-square"></i></a>
+                        <a href="https://twitter.com/ramgopalsiddh1/"><i class="fa-brands fa-twitter-square"></i></a>
+                    </div>
+                    <!--add cv soon-->
+                    <a href=""  class="btn btn2"> Download CV soon......</a>
+                    <!--add cv soon-->
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-----------------------------------about------------------------------------------>
+    <div id="about">
+        <div class="continer">
+            <div class="row">
+               <!-- <div class="about-col-1">
+                    <img src="about.jpg">
+                </div> -->
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p> add some line of description</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>web devlopment</span</li>
+                            <li><span>Git and github</span></li>
+                            <li><span>Python</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Freshers</span>(Student)</li>
+                            <li><span>learning </span>new skills</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li> <span>2019 - current</span><br>B.tech student at<a href="https://gitjaipur.com/"> GIT Jaipur</a></li>
+                            <li> <span>2018 - 2019</span><br> 12th from Shri Bhartiya Adarsh Vidhyapeeth Sr.Sec.School ,Sardarshahar(RBSE)</li>
+                            <li> <span>2016 - 2017</span><br> 10th from Sanskar children aca.sr.sec.sch.,sardarshar(RBSE) </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright © RAM GOPAL. Made with <i class="fa-solid fa-heart"></i> by ram gopal siddh</p>
+        </div>
+    </div>
+<!-----------------------js script------------------------------------------------------->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <!------------------side menu style ---------------------------------->
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <!-----------------google sheet script--------------------------------------->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxp6oWHmjKhZh-7XkPsBmtwQD9vwL2i8UnAd01JZGzpoxfzUy_6uTO3im9_UoFSlKzZNQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

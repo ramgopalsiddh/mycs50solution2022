@@ -1,0 +1,329 @@
+flight on 29 july 2021
+18 | 8 | 6 | 2021 | 7 | 29 | 16 | 0
+23 | 8 | 11 | 2021 | 7 | 29 | 12 | 15
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20
+43 | 8 | 1 | 2021 | 7 | 29 | 9 | 30
+53 | 8 | 9 | 2021 | 7 | 29 | 15 | 20
+
+bakery data
+sqlite> SELECT * FROM bakery_security_logs WHERE day = 28 AND month = 7 AND year = 2021 AND activity = "exit";
+id | year | month | day | hour | minute | activity | license_plate
+221 | 2021 | 7 | 28 | 8 | 2 | exit | 1M92998
+222 | 2021 | 7 | 28 | 8 | 2 | exit | N507616
+224 | 2021 | 7 | 28 | 8 | 7 | exit | 7Z8B130
+226 | 2021 | 7 | 28 | 8 | 13 | exit | 47MEFVA
+229 | 2021 | 7 | 28 | 8 | 15 | exit | D965M59
+230 | 2021 | 7 | 28 | 8 | 15 | exit | HW0488P
+235 | 2021 | 7 | 28 | 8 | 25 | exit | HOD8639
+236 | 2021 | 7 | 28 | 8 | 34 | exit | L68E5I0
+239 | 2021 | 7 | 28 | 8 | 34 | exit | W2CT78U
+242 | 2021 | 7 | 28 | 8 | 38 | exit | 3933NUH
+245 | 2021 | 7 | 28 | 8 | 44 | exit | 1FBL6TH
+247 | 2021 | 7 | 28 | 8 | 49 | exit | P14PE2Q
+249 | 2021 | 7 | 28 | 8 | 50 | exit | 4V16VO0
+251 | 2021 | 7 | 28 | 8 | 57 | exit | 8LLB02B
+253 | 2021 | 7 | 28 | 8 | 59 | exit | O784M2U
+260 | 2021 | 7 | 28 | 10 | 16 | exit | 5P2BI95
+261 | 2021 | 7 | 28 | 10 | 18 | exit | 94KL13X
+262 | 2021 | 7 | 28 | 10 | 18 | exit | 6P58WS2
+263 | 2021 | 7 | 28 | 10 | 19 | exit | 4328GD8
+264 | 2021 | 7 | 28 | 10 | 20 | exit | G412CB7
+265 | 2021 | 7 | 28 | 10 | 21 | exit | L93JTIZ
+266 | 2021 | 7 | 28 | 10 | 23 | exit | 322W7JE
+267 | 2021 | 7 | 28 | 10 | 23 | exit | 0NTHK55
+268 | 2021 | 7 | 28 | 10 | 35 | exit | 1106N58
+280 | 2021 | 7 | 28 | 14 | 18 | exit | NAW9653
+281 | 2021 | 7 | 28 | 15 | 6 | exit | RS7I6A0
+282 | 2021 | 7 | 28 | 15 | 16 | exit | 94MV71O
+283 | 2021 | 7 | 28 | 16 | 6 | exit | WD5M8I6
+284 | 2021 | 7 | 28 | 16 | 38 | exit | 4468KVT
+285 | 2021 | 7 | 28 | 16 | 42 | exit | 207W38T
+286 | 2021 | 7 | 28 | 16 | 47 | exit | C194752
+287 | 2021 | 7 | 28 | 17 | 11 | exit | NRYN856
+288 | 2021 | 7 | 28 | 17 | 15 | exit | 13FNH73
+289 | 2021 | 7 | 28 | 17 | 16 | exit | V47T75I
+290 | 2021 | 7 | 28 | 17 | 18 | exit | R3G7486
+291 | 2021 | 7 | 28 | 17 | 36 | exit | FLFN3W0
+292 | 2021 | 7 | 28 | 17 | 47 | exit | 4963D92
+
+
+sqlite> SELECT * FROM phone_calls WHERE day = 28 AND month = 7 AND year = 2021 AND duration < 60;
+id | caller | receiver | year | month | day | duration
+221 | (130) 555-0289 | (996) 555-8899 | 2021 | 7 | 28 | 51
+224 | (499) 555-9472 | (892) 555-8872 | 2021 | 7 | 28 | 36
+233 | (367) 555-5533 | (375) 555-8161 | 2021 | 7 | 28 | 45
+251 | (499) 555-9472 | (717) 555-1342 | 2021 | 7 | 28 | 50
+254 | (286) 555-6063 | (676) 555-6554 | 2021 | 7 | 28 | 43
+255 | (770) 555-1861 | (725) 555-3243 | 2021 | 7 | 28 | 49
+261 | (031) 555-6622 | (910) 555-3251 | 2021 | 7 | 28 | 38
+279 | (826) 555-1652 | (066) 555-9701 | 2021 | 7 | 28 | 55
+281 | (338) 555-6650 | (704) 555-2131 | 2021 | 7 | 28 | 54
+
+sqlite> SELECT * FROM atm_transactions  WHERE day = 28 AND month = 7 AND year = 2021 AND atm_location = "Leggett Street";
+id | account_number | year | month | day | atm_location | transaction_type | amount
+246 | 28500762 | 2021 | 7 | 28 | Leggett Street | withdraw | 48
+264 | 28296815 | 2021 | 7 | 28 | Leggett Street | withdraw | 20
+266 | 76054385 | 2021 | 7 | 28 | Leggett Street | withdraw | 60
+267 | 49610011 | 2021 | 7 | 28 | Leggett Street | withdraw | 50
+269 | 16153065 | 2021 | 7 | 28 | Leggett Street | withdraw | 80
+288 | 25506511 | 2021 | 7 | 28 | Leggett Street | withdraw | 20
+313 | 81061156 | 2021 | 7 | 28 | Leggett Street | withdraw | 30
+336 | 26013199 | 2021 | 7 | 28 | Leggett Street | withdraw | 35
+
+sqlite> SELECT * FROM flights  WHERE day = 29 AND month = 7 AND year = 2021;
+id | origin_airport_id | destination_airport_id | year | month | day | hour | minute
+18 | 8 | 6 | 2021 | 7 | 29 | 16 | 0
+23 | 8 | 11 | 2021 | 7 | 29 | 12 | 15
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20
+43 | 8 | 1 | 2021 | 7 | 29 | 9 | 30
+53 | 8 | 9 | 2021 | 7 | 29 | 15 | 20
+sqlite>
+
+
+Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away. If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.
+I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
+As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
+
+
+SELECT * FROM bakery_security_logs WHERE day = 28 AND month = 7 AND year = 2021 AND activity = "exit" order by hour and minute;
+
+SELECT * FROM flights JOIN passengers ON passengers.flight_id WHERE day = 29 AND month = 7 AND year = 2021 ORDER BY day and hour and minute;
+
+SELECT * FROM flights JOIN passengers ON passengers.flight_id = flights.id WHERE flight_id = 18;
+
+SELECT * FROM flights JOIN passengers ON passengers.flight_id = flights.id JOIN people ON people.passport_number = passengers.passport_number WHERE flight_id = 18;
+
+SELECT * FROM bakery_security_logs WHERE day = 28 AND month = 7 AND year = 2021 AND activity = "exit" order by hour and minute;
+
+SELECT * FROM flights JOIN passengers ON passengers.flight_id = flights.id JOIN people ON people.passport_number = passengers.passport_number JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate WHERE flight_id = 18 AND bakery_security_logs.day = 28 AND bakery_security_logs.month = 7 AND bakery_security_logs.year = 2021 AND bakery_security_logs.activity = "exit";
+
+SELECT * FROM phone_calls WHERE day = 28 AND month = 7 AND year = 2021 AND duration < 60;
+
+SELECT * FROM flights JOIN passengers ON passengers.flight_id = flights.id JOIN people ON people.passport_number = passengers.passport_number JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate JOIN phone_calls ON people.phone_number = phone_calls.caller WHERE flight_id = 18 AND bakery_security_logs.day = 28 AND bakery_security_logs.month = 7 AND bakery_security_logs.year = 2021 AND bakery_security_logs.activity = "exit" AND phone_calls.day = 28 AND phone_calls.month = 7 AND phone_calls.year = 2021 AND phone_calls.duration < 60;
+
+SELECT * FROM flights JOIN passengers ON passengers.flight_id = flights.id JOIN airports ON airports.id = flights.destination_airport_id JOIN people ON people.passport_number = passengers.passport_number JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate JOIN phone_calls ON people.phone_number = phone_calls.caller WHERE flight_id = 18 AND bakery_security_logs.day = 28 AND bakery_security_logs.month = 7 AND bakery_security_logs.year = 2021 AND bakery_security_logs.activity = "exit" AND phone_calls.day = 28 AND phone_calls.month = 7 AND phone_calls.year = 2021 AND phone_calls.duration < 60;
+
+SELECT * FROM people WHERE phone_number = "(725) 555-3243";
+
+
+--- try 2
+
+sqlite>
+sqlite> .schema
+CREATE TABLE crime_scene_reports (
+id INTEGER,
+year INTEGER,
+month INTEGER,
+day INTEGER,
+street TEXT,
+description TEXT,
+PRIMARY KEY(id)
+);
+CREATE TABLE interviews (
+id INTEGER,
+name TEXT,
+year INTEGER,
+month INTEGER,
+day INTEGER,
+transcript TEXT,
+PRIMARY KEY(id)
+);
+CREATE TABLE atm_transactions (
+id INTEGER,
+account_number INTEGER,
+year INTEGER,
+month INTEGER,
+day INTEGER,
+atm_location TEXT,
+transaction_type TEXT,
+amount INTEGER,
+PRIMARY KEY(id)
+);
+CREATE TABLE bank_accounts (
+account_number INTEGER,
+person_id INTEGER,
+creation_year INTEGER,
+FOREIGN KEY(person_id) REFERENCES people(id)
+);
+CREATE TABLE airports (
+id INTEGER,
+abbreviation TEXT,
+full_name TEXT,
+city TEXT,
+PRIMARY KEY(id)
+);
+CREATE TABLE flights (
+id INTEGER,
+origin_airport_id INTEGER,
+destination_airport_id INTEGER,
+year INTEGER,
+month INTEGER,
+day INTEGER,
+hour INTEGER,
+minute INTEGER,
+PRIMARY KEY(id),
+FOREIGN KEY(origin_airport_id) REFERENCES airports(id),
+FOREIGN KEY(destination_airport_id) REFERENCES airports(id)
+);
+CREATE TABLE passengers (
+flight_id INTEGER,
+passport_number INTEGER,
+seat TEXT,
+FOREIGN KEY(flight_id) REFERENCES flights(id)
+);
+CREATE TABLE phone_calls (
+id INTEGER,
+caller TEXT,
+receiver TEXT,
+year INTEGER,
+month INTEGER,
+day INTEGER,
+duration INTEGER,
+PRIMARY KEY(id)
+);
+CREATE TABLE people (
+id INTEGER,
+name TEXT,
+phone_number TEXT,
+passport_number INTEGER,
+license_plate TEXT,
+PRIMARY KEY(id)
+);
+CREATE TABLE bakery_security_logs (
+id INTEGER,
+year INTEGER,
+month INTEGER,
+day INTEGER,
+hour INTEGER,
+minute INTEGER,
+activity TEXT,
+license_plate TEXT,
+PRIMARY KEY(id)
+);
+
+sqlite> SELECT * FROM crime_scene_reports WHERE month = 7 AND day = 28 AND street = "Humphrey Street";
+id | year | month | day | street | description
+295 | 2021 | 7 | 28 | Humphrey Street | Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery. Interviews were conducted today with three witnesses who were present at the time – each of their interview transcripts mentions the bakery.
+297 | 2021 | 7 | 28 | Humphrey Street | Littering took place at 16:36. No known witnesses.
+
+sqlite> SELECT * FROM interviews WHERE day = 28 AND month = 7 AND year = 2021 AND transcript LIKE '%bakery%';
+id | name | year | month | day | transcript
+161 | Ruth | 2021 | 7 | 28 | Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away. If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.
+162 | Eugene | 2021 | 7 | 28 | I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
+163 | Raymond | 2021 | 7 | 28 | As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
+
+sqlite> D month = 7 AND year = 2021 AND hour >= 10 AND minute > 15 AND minute < 30 AND activity = "exit" order by hour and minute;
+id | year | month | day | hour | minute | activity | license_plate
+260 | 2021 | 7 | 28 | 10 | 16 | exit | 5P2BI95
+261 | 2021 | 7 | 28 | 10 | 18 | exit | 94KL13X
+262 | 2021 | 7 | 28 | 10 | 18 | exit | 6P58WS2
+263 | 2021 | 7 | 28 | 10 | 19 | exit | 4328GD8
+264 | 2021 | 7 | 28 | 10 | 20 | exit | G412CB7
+265 | 2021 | 7 | 28 | 10 | 21 | exit | L93JTIZ
+266 | 2021 | 7 | 28 | 10 | 23 | exit | 322W7JE
+267 | 2021 | 7 | 28 | 10 | 23 | exit | 0NTHK55
+280 | 2021 | 7 | 28 | 14 | 18 | exit | NAW9653
+282 | 2021 | 7 | 28 | 15 | 16 | exit | 94MV71O
+289 | 2021 | 7 | 28 | 17 | 16 | exit | V47T75I
+290 | 2021 | 7 | 28 | 17 | 18 | exit | R3G7486
+
+sqlite> SELECT * FROM flights WHERE day = 29 AND month = 7 AND year = 2021 ORDER BY hour;
+id | origin_airport_id | destination_airport_id | year | month | day | hour | minute
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20
+43 | 8 | 1 | 2021 | 7 | 29 | 9 | 30
+23 | 8 | 11 | 2021 | 7 | 29 | 12 | 15
+53 | 8 | 9 | 2021 | 7 | 29 | 15 | 20
+18 | 8 | 6 | 2021 | 7 | 29 | 16 | 0
+
+sqlite> SELECT * FROM flights JOIN passengers ON passengers.flight_id = flights.id WHERE flight_id = 36;
+id | origin_airport_id | destination_airport_id | year | month | day | hour | minute | flight_id | passport_number | seat
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 7214083635 | 2A
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 1695452385 | 3B
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 5773159633 | 4A
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 1540955065 | 5C
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 8294398571 | 6C
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 1988161715 | 6D
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 9878712108 | 7A
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 8496433585 | 7B
+
+sqlite> SELECT * FROM phone_calls WHERE day = 28 AND month = 7 AND year = 2021 AND duration < 60;
+id | caller | receiver | year | month | day | duration
+221 | (130) 555-0289 | (996) 555-8899 | 2021 | 7 | 28 | 51
+224 | (499) 555-9472 | (892) 555-8872 | 2021 | 7 | 28 | 36
+233 | (367) 555-5533 | (375) 555-8161 | 2021 | 7 | 28 | 45
+251 | (499) 555-9472 | (717) 555-1342 | 2021 | 7 | 28 | 50
+254 | (286) 555-6063 | (676) 555-6554 | 2021 | 7 | 28 | 43
+255 | (770) 555-1861 | (725) 555-3243 | 2021 | 7 | 28 | 49
+261 | (031) 555-6622 | (910) 555-3251 | 2021 | 7 | 28 | 38
+279 | (826) 555-1652 | (066) 555-9701 | 2021 | 7 | 28 | 55
+281 | (338) 555-6650 | (704) 555-2131 | 2021 | 7 | 28 | 54
+
+sqlite> SELECT * FROM flights JOIN passengers ON passengers.flight_id = flights.id JOIN people ON people.passport_number = passengers.passport_number JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate JOIN phone_calls ON people.phone_number = phone_calls.caller WHERE flight_id = 36 AND bakery_security_logs.day = 28 AND bakery_security_logs.month = 7 AND bakery_security_logs.year = 2021 AND bakery_security_logs.activity = "exit" AND bakery_security_logs.hour >= 10 AND bakery_security_logs.minute > 15 AND bakery_security_logs.minute < 30 AND phone_calls.day = 28 AND phone_calls.month = 7 AND phone_calls.year = 2021 AND phone_calls.duration < 60;
+
+id | origin_airport_id | destination_airport_id | year | month | day | hour | minute | flight_id | passport_number | seat | id | name | phone_number | passport_number | license_plate | id | year | month | day | hour | minute | activity | license_plate | id | caller | receiver | year | month | day | duration
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 1695452385 | 3B | 398010 | Sofia | (130) 555-0289 | 1695452385 | G412CB7 | 264 | 2021 | 7 | 28 | 10 | 20 | exit | G412CB7 | 221 | (130) 555-0289 | (996) 555-8899 | 2021 | 7 | 28 | 51
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 5773159633 | 4A | 686048 | Bruce | (367) 555-5533 | 5773159633 | 94KL13X | 261 | 2021 | 7 | 28 | 10 | 18 | exit | 94KL13X | 233 | (367) 555-5533 | (375) 555-8161 | 2021 | 7 | 28 | 45
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 8294398571 | 6C | 560886 | Kelsey | (499) 555-9472 | 8294398571 | 0NTHK55 | 267 | 2021 | 7 | 28 | 10 | 23 | exit | 0NTHK55 | 251 | (499) 555-9472 | (717) 555-1342 | 2021 | 7 | 28 | 50
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 8294398571 | 6C | 560886 | Kelsey | (499) 555-9472 | 8294398571 | 0NTHK55 | 267 | 2021 | 7 | 28 | 10 | 23 | exit | 0NTHK55 | 224 | (499) 555-9472 | (892) 555-8872 | 2021 | 7 | 28 | 36
+
+SELECT * FROM atm_transactions  WHERE day = 28 AND month = 7 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
+
+
+SELECT * FROM flights INNER JOIN passengers ON passengers.flight_id = flights.id INNER JOIN airports ON airports.id = flights.destination_airport_id INNER JOIN people ON people.passport_number = passengers.passport_number INNER JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate INNER JOIN phone_calls ON people.phone_number = phone_calls.caller INNER JOIN atm_transactions ON atm_transactions. WHERE flight_id = 36 AND bakery_security_logs.day = 28 AND bakery_security_logs.month = 7 AND bakery_security_logs.year = 2021 AND bakery_security_logs.activity = "exit" AND bakery_security_logs.minute > 15 AND bakery_security_logs.minute < 30 AND phone_calls.day = 28 AND phone_calls.month = 7 AND phone_calls.year = 2021 AND phone_calls.duration < 60 atm_transactions.day = 28 AND atm_transactions.month = 7 AND atm_transactions.year = 2021 AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
+
+
+SELECT * FROM phone_calls JOIN people ON people.phone_number = phone_calls.caller WHERE day = 28 AND month = 7 AND year = 2021 AND duration < 60;
+
+
+SELECT * FROM atm_transactions  WHERE atm_transactions.day = 28 AND atm_transactions.month = 7 AND atm_transactions.year = 2021 AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
+
+
+
+SELECT
+    *
+FROM
+    flights
+INNER JOIN
+    passengers
+    ON passengers.flight_id = flights.id
+INNER JOIN
+    airports
+    ON airports.id = flights.destination_airport_id
+INNER JOIN
+    people
+    ON people.passport_number = passengers.passport_number
+INNER JOIN
+    bakery_security_logs
+    ON bakery_security_logs.license_plate = people.license_plate
+INNER JOIN
+    phone_calls
+    ON people.phone_number = phone_calls.caller
+INNER JOIN
+    bank_accounts
+    ON bank_accounts.person_id = people.id
+INNER JOIN
+    atm_transactions
+    ON atm_transactions.account_number = bank_accounts.account_number
+WHERE
+    flight_id = 36
+    AND bakery_security_logs.day = 28
+    AND bakery_security_logs.month = 7
+    AND bakery_security_logs.year = 2021
+    AND bakery_security_logs.activity = "exit"
+    AND bakery_security_logs.minute > 15
+    AND bakery_security_logs.minute < 30
+    AND phone_calls.day = 28
+    AND phone_calls.month = 7
+    AND phone_calls.year = 2021
+    AND phone_calls.duration < 60
+    AND atm_transactions.day = 28
+    AND atm_transactions.month = 7
+    AND atm_transactions.year = 2021
+    AND atm_transactions.atm_location = "Leggett Street"
+    AND atm_transactions.transaction_type = "withdraw";
+
+
+id | origin_airport_id | destination_airport_id | year | month | day | hour | minute | flight_id | passport_number | seat | id | abbreviation | full_name | city | id | name | phone_number | passport_number | license_plate | id | year | month | day | hour | minute | activity | license_plate | id | caller | receiver | year | month | day | duration | account_number | person_id | creation_year | id | account_number | year | month | day | atm_location | transaction_type | amount
+36 | 8 | 4 | 2021 | 7 | 29 | 8 | 20 | 36 | 5773159633 | 4A | 4 | LGA | LaGuardia Airport | New York City | 686048 | Bruce | (367) 555-5533 | 5773159633 | 94KL13X | 261 | 2021 | 7 | 28 | 10 | 18 | exit | 94KL13X | 233 | (367) 555-5533 | (375) 555-8161 | 2021 | 7 | 28 | 45 | 49610011 | 686048 | 2010 | 267 | 49610011 | 2021 | 7 | 28 | Leggett Street | withdraw | 50
+
+SELECT * FROM people WHERE phone_number = "(375) 555-8161";
