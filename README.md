@@ -1,6 +1,6 @@
 # mycs50solution of my 2022 course 
 
- ### my portfolio 🔗<a href="https://ramgopalsiddh.github.io/">portfolio website</a>
+ ### my portfolio 🔗<a href="https://ramgopal.dev/">portfolio website</a>
 
 </br>
 
